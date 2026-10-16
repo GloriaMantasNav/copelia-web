@@ -79,6 +79,9 @@ h2 em { font-weight: 400; }
 .banner-copy .eyebrow { color: #f2d9cd; }
 .banner-copy h2 { color: white; font-size: clamp(38px, 6vw, 62px); margin-bottom: 20px; }
 .banner-copy > p:not(.eyebrow) { font: 16px/1.7 var(--serif); margin: 0 auto 28px; max-width: 570px; }
+.repertoire-downloads { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.repertoire-downloads a { background: rgba(255,253,251,.94); color: var(--ink); font-size: 10px; font-weight: 600; letter-spacing: .08em; padding: 12px 15px; text-decoration: none; text-transform: uppercase; transition: background .2s, transform .2s; }
+.repertoire-downloads a:hover { background: var(--rose-pale); transform: translateY(-2px); }
 
 .listen { align-items: center; display: grid; gap: clamp(42px, 9vw, 120px); grid-template-columns: 1.1fr .9fr; }
 .listen-image img { aspect-ratio: 1.45; height: 100%; object-fit: cover; width: 100%; }
@@ -103,10 +106,19 @@ h2 em { font-weight: 400; }
 .contact-form .button { align-self: flex-start; margin-top: 4px; }
 .form-note { color: #8a7b73; font-size: 11px; margin: 16px 0 0; }
 
-.site-footer { background: #a7c5be; color: #fff; padding: 38px 7vw 20px; text-align: center; }
-.site-footer img { margin: auto; max-height: 125px; object-fit: contain; width: min(460px, 90%); }
+.site-footer {
+  align-items: center; background: linear-gradient(rgba(153, 155, 132, .78), rgba(153, 155, 132, .78)), url('assets/fondofooter.JPG') center 52%/cover no-repeat;
+  color: white; display: flex; flex-direction: column; min-height: 300px; padding: 48px 24px 24px; text-align: center;
+}
+.footer-links { align-items: center; display: flex; gap: clamp(28px, 6vw, 62px); justify-content: center; margin: 0 0 28px; }
+.footer-links a { align-items: center; display: inline-flex; height: 34px; justify-content: center; transition: opacity .2s, transform .2s; width: 34px; }
+.footer-links a:hover { opacity: .75; transform: translateY(-3px); }
+.footer-links img { filter: drop-shadow(0 1px 1px rgba(0,0,0,.12)); height: 100%; object-fit: contain; width: 100%; }
+.footer-logo { display: block; margin: 0 auto 10px; width: min(230px, 58vw); }
+.footer-logo img { display: block; height: auto; width: 100%; }
 .site-footer p, .site-footer a { font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
-.site-footer a { display: inline-block; margin: 10px; text-decoration: none; }
+.footer-caption { margin: 0 0 6px; }
+.footer-top { color: white; margin-top: 10px; text-decoration: none; }
 
 @media (max-width: 760px) {
   html { scroll-padding-top: 70px; }
